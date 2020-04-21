@@ -1,0 +1,18 @@
+<!--pages/index/setAddress.wxml-->
+<view class="set-address">
+  <view class="border address-set">
+    <view class="set-icon">
+      <image class="address-icon" src="../images/address-icon.png"></image>
+      <text>北京市 </text>
+      <image class="address-down" src="../images/down-arrow.png"></image>
+    </view>
+    <view class="set-search">
+      <image src="../images/search.png"></image>
+      <input class="set-input" type="text" placeholder="请输入收货地址" placeholder-class="input-place"></input>
+    </view>
+  </view>
+  <view class="border get-address">
+    <text wx:if="{{address && address.length}}">{{address}}</text>
+    <text bindtap="relocate">重新定位</text>
+  </view>
+</view>

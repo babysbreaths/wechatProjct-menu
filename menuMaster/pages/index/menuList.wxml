@@ -1,0 +1,39 @@
+<!--pages/index/menuList.wxml-->
+<view class="menu-list-page">
+  <view class="menu-tab">
+    <view wx:for="{{menuTabList}}" wx:key="id">
+      <view bindtap="tabSlider" data-name="{{item.name}}" class="{{currentTab === item.name ? 'menu-tab-item-actived' : 'menu-tab-item'}}">
+      {{item.value}}
+      </view>
+    </view>
+  </view>
+  <view class="menu-detail">
+    <view class="menu-detail-null" wx:if="{{!(currentList && currentList.length)}}">-暂无数据-</view>
+    <view class="menu-detail-item" wx:for="{{currentList}}" wx:key="_id">
+      <view class="menu-detail-image">
+        <image class="menu-detail-img"></image>
+        <text class="menu-sign" wx-if="{{item.sign}}">{{item.sign}}</text>
+      </view>
+      <view class="menu-detail-value">
+        <text class="menu-value-name">{{item.name}}</text>
+        <view class="menu-value-des">
+          <text class="menu-value-monthlySale">月售{{item.monthlySale}}</text>
+          <text class="menu-value-praise">好评度{{item.praise}}</text>
+        </view>
+        <text class="menu-value-weight">约{{item.weight}}克</text>
+        <view class="menu-value-operate">
+          <view>
+            <text class="menu-value-money">¥</text>
+            <text class="menu-value-price">{{item.price}}</text>
+          </view>
+          <view class="menu-operate-number">
+            <text wx:if="{{item.num}}" bindtap="changeMenu" data-method="reduce" data-id="{{item._id}}" class="menu-operate-reduce">-</text>
+            <text wx:if="{{item.num}}" class="menu-operate-val">{{item.num || 0}}</text>
+            <text bindtap="changeMenu" data-method="add" data-id="{{item._id}}" class="menu-operate-add">+</text>
+          </view>
+        </view>
+        
+      </view>
+    </view>
+  </view>
+</view>

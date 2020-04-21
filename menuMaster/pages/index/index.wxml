@@ -1,0 +1,135 @@
+<!--index.wxml-->
+<view class="home-page">
+  <view class="home-location">
+    <image class="home-location-icon" src="../images/location.png"></image>
+    <view bindtap="getLocation" wx:if="{{address && address.length}}" class="home-location-txt">  
+      <text>{{address}}</text> 
+      <text  class="home-location-bind">></text>
+    </view>
+    <view bindtap="getLocation" wx:else>设置收货地址</view>
+  </view>
+  <view class="home-search">
+    <image src='../images/search.png'></image>
+    <input placeholder="小鱼大作酸菜鱼 满20减16"></input>
+  </view>
+  <view class="home-list">
+    <view wx:for="{{homeList}}" class="home-item" wx:key="id">
+      <image class="{{item.class}}"></image>
+      <text>{{item.label}}</text>
+    </view>
+  </view>
+  <view class="home-wnyx">
+    <view class="wnyx-header">
+      <text>为你优选</text>
+      <text>更多 ></text>
+    </view>
+    <scroll-view scroll-x="true" class="wnyx-swiper">
+      <!-- <swiper indicator-dots="{{true}}"
+        previous-margin="150rpx"
+        next-margin="150rpx"
+        circular="{{true}}"
+        indicator-active-color="{{dotActiveColor}}"
+        autoplay="{{false}}" interval="{{2000}}" duration="{{500}}">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <view class="swiper-item {{item}}">
+            {{item}}
+            </view>
+          </swiper-item>
+        </block>
+      </swiper> -->
+      <block wx:for="{{wnyList}}" wx:key="dp_class">
+        <view class="wnyx-swiper-item ">
+          <image class="{{item.dp_class}}"></image>
+          <view class="wnyx-swiper-text">
+            <text>{{item.dp_name}}({{item.dp_address}})</text>
+            <text>{{item.dp_des}}</text>
+          </view>
+        </view>
+        
+      </block>
+      <!-- <block>
+      <view class="wnyx-swiper-item wnyx-swiper-more" >
+        <text>查</text>
+        <text>看</text>
+        <text>更</text>
+        <text>多</text>
+      </view>
+      </block> -->
+    </scroll-view>
+  </view>
+  <view class="home-swiper">
+    <swiper
+      bindchange="swiperChange"
+      circular="{{true}}"
+      autoplay="false" interval="2000" duration="{{500}}">
+      <block wx:for="{{homeSwiperList}}" wx:key="hs_id">
+        <swiper-item>
+          <view class="home-swiper-item {{item.hs_class}}">
+          {{item.hs_title}}
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="home-dots"> 
+      <block wx:for="{{homeSwiperList}}" wx:key="hs_id"> 
+        <view class="home-dot {{index == swiperCurrent ? 'home-active' : ''}}"></view> 
+      </block> 
+    </view>
+  </view>
+  <view class="home-wnyx">
+    <view class="wnyx-header">
+      <text>神价格</text>
+      <text>更多 ></text>
+    </view>
+    <scroll-view scroll-x="true" class="wnyx-swiper">
+      <block wx:for="{{wnyList}}" wx:key="dp_class">
+        <view class="wnyx-swiper-item ">
+          <image class="{{item.dp_class}}"></image>
+          <view class="wnyx-swiper-text">
+            <text>{{item.dp_name}}({{item.dp_address}})</text>
+            <text>{{item.dp_des}}</text>
+          </view>
+        </view>
+        
+      </block>
+    </scroll-view>
+  </view>
+  <view class="home-fjsj">
+    <view class="fjsj-title select">
+      <view>
+        <text>综合排序</text>
+      </view>
+      <view class="fjsj-options">
+        <text>综合排序</text>
+        <text>距离最近</text>
+        <text>评分最高</text>
+        <text>起送价最低</text>
+        <text>配送价最低</text>
+        <text>人均高到低</text>
+        <text>人均低到高</text>
+      </view>
+    </view>
+    <view class="fjsj-title">销量高</view>
+    <view class="fjsj-title">速度快</view>
+    <view class="fjsj-title">津贴联盟</view>
+    <view class="fjsj-title">筛选</view>
+  </view>
+  <!-- <view class="signature">
+    <text class="signature-text">本店特色：</text>
+    <view class="signature-list">
+      <view class="signature-item" wx:for="{{signatureList}}" wx:key="_id">
+        <view bindtap="tapMenu" data-id='{{item._id}}'>
+          <image class="signature-item-image"></image>
+          <text class="signature-item-name">{{item.name}}</text>
+          <view class="signature-price">
+            <text class="signature-item-icon">¥</text>
+            <text class="signature-item-price">{{item.price}}</text>
+          </view>
+        </view>
+        
+      </view>
+    </view>
+    
+  </view> -->
+</view>

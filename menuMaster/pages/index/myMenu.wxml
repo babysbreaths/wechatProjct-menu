@@ -1,0 +1,30 @@
+<!--pages/index/myMenu.wxml-->
+<view class="my-menu">
+  <view wx:if="{{selectedMenu && selectedMenu.length}}">
+    <view class="my-menu-item" wx:for="{{selectedMenu}}" wx:key="_id">
+      <image class="my-menu-img"></image>
+      <view class="my-menu-txt">
+        <text class="my-menu-name">{{item.name}}</text>
+        <text class="my-menu-weight">约{{item.weight}}克</text>
+        <view class="my-menu-price">
+          <text>¥</text>
+          <text>{{item.price}}</text>
+        </view>
+      </view>
+      <view class="my-menu-number">
+        <text bindtap="changeMenu" data-method="reduce" data-id="{{item._id}}" class="my-menu-operate-reduce">-</text>
+        <text class="my-menu-operate-val">{{item.num || 0}}</text>
+        <text bindtap="changeMenu" data-method="add" data-id="{{item._id}}" class="my-menu-operate-add">+</text>
+      </view>
+    </view>
+
+    <view class="my-menu-total">
+      总计:{{total}}
+    </view>
+  </view>
+  <view wx:else>
+    暂无订单
+  </view>
+
+  
+</view>

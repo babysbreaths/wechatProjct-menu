@@ -1,0 +1,123 @@
+/* pages/index/menuList.wxss */
+.menu-list-page{
+  /* display: flex; */
+  padding-left: 160rpx;
+}
+.menu-tab{
+  width: 160rpx;
+  height: 100%;
+  background: #f7f4f4;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.menu-tab-item,.menu-tab-item-actived{
+  height: 50rpx;
+  padding: 20rpx 0;
+  text-align: center;
+  background: #f7f4f4;
+  color: #5a5858;
+}
+.menu-tab-item-actived{
+  background: #fff;
+  color: #000;
+}
+.menu-detail{
+  flex: 1;
+}
+.menu-detail-null{
+  text-align: center;
+  margin-top: 50rpx;
+  color: #ccc;
+  font-size: 26rpx;
+}
+.menu-detail-item{
+  width: 100%;
+  padding: 20rpx 20rpx;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.menu-detail-image{
+  width: 200rpx;
+  height: 200rpx;
+  background: #99CCCC;
+  position: relative;
+}
+.menu-sign{
+  position: absolute;
+  right: -5rpx;
+  top: -5rpx;
+  display: inline-block;
+  background: #ccc;
+  border-radius: 5rpx;
+  font-size: 25rpx;
+  padding: 3rpx 8rpx;
+}
+.menu-detail-img{
+  width: 100%;
+  height: 100%;
+  /* background: pink; */
+}
+.menu-detail-value{
+  flex: 1;
+  margin-left: 20rpx;
+  height: 200rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.menu-value-name{
+  font-size: 35rpx;
+}
+.menu-value-monthlySale,.menu-value-praise{
+  font-size: 20rpx;
+  color: rgb(204, 199, 199);
+}
+.menu-value-des{
+  height: fit-content;
+  display: flex;
+}
+.menu-value-praise{
+  margin-left: 20rpx;
+}
+.menu-value-weight{
+  font-size: 20rpx;
+  color: rgb(46, 45, 45);
+  background: #eeebeb;
+  border-radius: 8rpx;
+  width: fit-content;
+  padding: 3rpx 8rpx;
+}
+.menu-value-operate{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-value-price{
+  color: red;
+}
+.menu-value-money{
+  color: red;
+  font-size: 26rpx;
+}
+.menu-operate-number{
+  display: flex;
+  align-items: center;
+}
+.menu-operate-reduce,.menu-operate-add{
+  width: 40rpx;
+  height: 40rpx;
+  display: inline-block;
+  line-height: 38rpx;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #e4dfdf;
+}
+.menu-operate-add{
+  background: orange;
+  border: none;
+}
+.menu-operate-val{
+  margin: 0 20rpx;
+}

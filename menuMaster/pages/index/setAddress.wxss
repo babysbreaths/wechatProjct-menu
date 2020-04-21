@@ -1,0 +1,73 @@
+/* pages/index/setAddress.wxss */
+.set-address{
+  
+}
+.address-set{
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx 20rpx 20rpx 20rpx;
+  align-items: center;
+}
+.border{
+  border-bottom: 1rpx solid #f0f0f0;
+}
+.address-set .address-icon{
+  width: 30rpx;
+  height: 30rpx;
+}
+.address-set text{
+  font-size: 26rpx;
+  margin-left: 5rpx;
+}
+.address-down{
+  width: 18rpx;
+  height: 18rpx;
+  margin-left: 10rpx;
+}
+.set-icon{
+  display: flex;
+  align-items: center;
+}
+.set-search{
+  flex: 1;
+  height: 40rpx;
+  position: relative;
+  padding: 10rpx 0 10rpx 0;
+  margin-left: 25rpx;
+}
+.set-search image{
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  left: 20rpx;
+  top: 17rpx;
+  z-index: 20;
+}
+.set-input{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(240, 239, 239, 0.89);
+  padding-left: 60rpx;
+  border-radius: 5rpx;
+  font-size: 26rpx;
+  color: rgb(233, 230, 230);
+  box-sizing: border-box;
+}
+.get-address{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx;
+}
+.get-address text:first-child{
+  font-size: 32rpx;
+  color: rgb(63, 61, 61);
+}
+.get-address text:last-child{
+  font-size: 26rpx;
+  color: rgb(238, 195, 53);
+}

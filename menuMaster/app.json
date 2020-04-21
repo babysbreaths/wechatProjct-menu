@@ -1,0 +1,53 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/index/myMenu",
+    "pages/index/mine",
+    "pages/menu/detail",
+    "pages/index/menuList",
+    "pages/index/setAddress"
+    
+  ],
+  "permission":{
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序获取您附近的门店" 
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "食为天菜谱",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor":"#FF6666",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"./pages/images/home.png",
+        "selectedIconPath":"./pages/images/homeA.png"
+      },
+      
+      {
+        "pagePath": "pages/index/myMenu",
+        "text": "我的菜单",
+        "iconPath":"./pages/images/myMenu.png",
+        "selectedIconPath":"./pages/images/myMenuA.png"
+      },
+      {
+        "pagePath": "pages/index/mine",
+        "text": "我的",
+        "iconPath":"./pages/images/mine.png",
+        "selectedIconPath":"./pages/images/mineA.png"
+      }
+      
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
